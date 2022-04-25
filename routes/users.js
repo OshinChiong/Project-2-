@@ -6,14 +6,14 @@ const bcryptjs = require("bcryptjs");
 const res = require('express/lib/response');
 const saltRounds = 10;
 
-
-
-
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get("/home", function (re, res, next) {
+  res.render("home");
+});
 
 router.get("/signup", function (re, res, next) {
   res.render("signup");
@@ -70,7 +70,7 @@ router.post("/login", (req, res) => {
 
 router.get("/logout", function (req, res, next) { 
 req.session.destroy();
-res.redirect("/")
+res.redirect("/users/home")
 });
 
 module.exports = router;

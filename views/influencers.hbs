@@ -1,3 +1,19 @@
-<h2> All comments </h2>
+<h2> All influencers </h2>
+{{message}}
 
-{{#each }}
+{{#each influencersFromApi}}
+    <img width="400" height="300" src="{{this.imageUrl}}" alt="pic">
+    <p> {{this.username}} </p>
+    <p> {{this.fullname}} </p>
+    <p> {{this.follower_count}} </p>
+    <p> {{this.following_count}} </p>
+
+  <h4> Reviews: </h4>
+
+  {{#each this.reviews}}
+    <h5>{{this.comment}}</h5>
+    <p>-{{this.user.fullName}}</p>
+  {{/each}}
+  <a href="/influencers/{{this._id}}/add-review"> add a Review </a>
+
+{{/each}}

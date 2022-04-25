@@ -1,21 +1,51 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/General@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
   color: #00B7FF;
 }
+/* .home {
+  
+  background-image: url("/images/General@2x.png");
+  background-repeat: repeat;
+
+
+} */
 
 .nav{
   text-align: right;
-  justify-content: space-around;
-  background-color: rgba(223, 255, 80, 0.531);
+  font-size: 100%;
+  margin-right: 20%;
 }
 
+
 .signup {
-  text-align: center;
-  background-color: #00D1AE;
-  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+  margin-top: 80px;
+  background:rgba(129, 177, 187, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: large;
+}
+}
+
+.login  {
+   box-sizing: border-box;
+   background-color: lightskyblue;
+}
+button{
+  box-sizing: border-box;
 }
 
