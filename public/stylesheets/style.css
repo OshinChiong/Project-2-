@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.nav{
+  text-align: right;
+  justify-content: space-around;
+  background-color: rgba(223, 255, 80, 0.531);
+}
+
+.signup {
+  text-align: center;
+  background-color: #00D1AE;
+  width: 170px;
+}
+
