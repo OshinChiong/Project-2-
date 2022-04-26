@@ -1,26 +1,28 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("/images/General@2x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+
+}
+.home {
+  background-image: url("/images/General@2x.png" );
+  background-size:cover;
+  height: 80vh; 
+  text-align:right;
+  text-align: left;
 }
 
 a {
   color: #00B7FF;
-}
-/* .home {
   
-  background-image: url("/images/General@2x.png");
-  background-repeat: repeat;
-
-
-} */
+}
 
 .nav{
   text-align: right;
-  font-size: 100%;
-  margin-right: 20%;
+  font-size: 150%;
+  margin-right: 15%;
+  margin-bottom: 20px;
+  color: #00B7FF;
+  
 }
 
 
@@ -33,19 +35,73 @@ a {
   height: 250px;
   padding: 40px;
   margin-top: 80px;
-  background:rgba(129, 177, 187, 0.5);
+  background:rgba(47, 224, 255, 0.131);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   font-size: large;
 }
-}
+
 
 .login  {
-   box-sizing: border-box;
-   background-color: lightskyblue;
-}
-button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height:1.5em;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 300px;
+  
+  padding: 40px;
+  margin-top: 80px;
+  background: rgba(47, 224, 255, 0.131);
   box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: large;
+}
+
+.in{
+  text-align: center;
+}
+.up{
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.segundo{
+background-image: url("/images/download.png"); 
+height: 20vh;
+background-repeat:repeat-x;
+background-position:right;
+font-size: medium;
+padding-top: 2%;
+
+}
+
+/* .texto{
+  padding-top: 10%;
+} */
+
+/* footer {
+  display:table-row;
+  background-image: url("/images/depositphotos_405550866-stock-illustration-google-play-store-apple-app.jpg"); 
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-right:40px;
+  margin-top:20px;
+  float:right;
+} */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-size: 500%;
+  background-repeat: no-repeat;
+  background-image: url("/images/depositphotos_405550866-stock-illustration-google-play-store-apple-app.jpg");  
 }
 

@@ -36,7 +36,7 @@ User.findOne({email: req.body.email})
             password: hashedPass
         })
         .then((createdUser) => {
-            res.render('index', {message: "You have created a new account"})
+            res.render('all-influencers', {message: "You have created a new account"})
         })
     }
 })
@@ -59,7 +59,7 @@ router.post("/login", (req, res) => {
         let correctPassword = bcrypt.compareSync(req.body.password, foundUser.password);
         if(correctPassword) {
             req.session.user = foundUser;
-            res.render('index', {message: "You have logged in"})
+            res.render('all-influencers', {message: "You have logged in"})
         } else {
             res.render('login', {message: "Incorrect Password"})
         }

@@ -1,9 +1,11 @@
-<h2> Add a review for </h2>
+<h2> Add a review  </h2>
+<a href="/influencers/influencers"> Go back </a>
 
-<form method="post" action=""> 
+<form method="post" action="/influencers/{{foundInfluencers._id}}/add-review"> 
 <label> Comment </label>
 <textarea name="comment"> </textarea>
-
+<button type="submit"> Add Review </button>
 </form>
+
 
 <p> {{message}} </p>
