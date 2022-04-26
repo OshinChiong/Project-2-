@@ -1,0 +1,20 @@
+<div class="details"> 
+
+<img src="{{foundInfluencers.image}}">
+ <a href="/influencers/influencers"> Go back </a>
+
+ <p> Username: {{foundInfluencers.username}} </p>
+ <p> Fullname: {{foundInfluencers.fullname}} </p>
+ <p> Followers: {{foundInfluencers.follower_count}} </p>
+ <p> Following: {{foundInfluencers.following_count}} </p>
+
+   <h4> Reviews: </h4>
+  {{#each foundInfluencers.reviews}}
+  <hr>
+
+  <hr>
+    <h5>{{this.comment}}</h5>
+    <p> -{{this.user.username}}</p>
+  {{/each}}
+
+</div>

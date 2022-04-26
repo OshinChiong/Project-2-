@@ -38,6 +38,23 @@ router.get("/influencers", isLoggedIn, (req, res) => {
     });
 });
 
+router.get("/:details", function(req, res) {
+  Influencers.findById(req.params.details)
+  .populate({
+    path: "reviews",
+    populate: {
+      path: "user",
+    },
+  })
+    .then(function (foundInfluencers) {
+      res.render("see-review", { foundInfluencers: foundInfluencers });
+    })
+    .catch(function (error) {
+      res.json(error);
+    });
+});
+
+
 router.get("/:id/add-review", isLoggedIn, (req, res) => {
   Influencers.findById(req.params.id)
     .then((foundInfluencers) => {

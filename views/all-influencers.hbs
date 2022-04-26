@@ -13,19 +13,12 @@
     <p> Followers: {{this.follower_count}} </p>
     <p> Following: {{this.following_count}} </p>
 
+   <a href="/influencers/{{this._id}}"> See reviews </a>
 
-  <h4> Reviews: </h4>
-
-  {{#each this.reviews}}
-  <hr>
-
-  <hr>
-    <h5>{{this.comment}}</h5>
-    <p> -{{this.user.username}}</p>
-  {{/each}}
   <ul> 
  <li> <a href="/influencers/{{this._id}}/add-review"> add a Review </a> </li>
 
+  <hr /> 
  </ul>
 </div>
 {{/each}}
