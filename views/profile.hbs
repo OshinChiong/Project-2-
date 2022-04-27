@@ -1,9 +1,53 @@
  <h1> InfluRaters</h1>
+<html>
+<head>
+<style>
+
+.profile{
+  
+ list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  display: block;
+  color: rgb(21, 234, 191);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="profile"> 
+<ul>
+  <li><a href="/users/profile"> Profile </a></li>
+  <li><a href="/influencers/influencers"> See all influencers</a></li>
+  {{!-- <li><a class="active" href="/users/profile"> Go Back</a></li> --}}
+  <li><a href="/users/logout"> Log out </a></li>
+</ul>
+</div>
+</body>
+</html>
  
- <a href="/users/profile"> Go back </a> 
+ 
+
+ 
+ {{!-- <a href="/users/profile"> Go back </a> 
  <a href="/users/profile"> Profile </a> 
  <a href="/influencers/influencers"> View all influencers</a> 
- <a href="/users/logout">Log out</a>
+ <a href="/users/logout">Log out</a> --}}
 
     <p> Username: {{this.username._id}} </p>
     <p> Fullname: {{this.fullname}} </p>
@@ -20,4 +64,4 @@
   <button type="submit"> Add new co-work </button>
 </form>
 
-<p>{{message}}</p> --}}
+ --}}

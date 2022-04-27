@@ -10,6 +10,7 @@ const influencersSchema = new Schema(
     },
     is_verified: {
       type: String,
+      required: true,
   },
   highlight_reel_count: {
       type: Number,

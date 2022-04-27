@@ -7,6 +7,10 @@ const res = require('express/lib/response');
 const Profile = require('../models/Profile.model');
 const saltRounds = 10;
 const isLoggedIn = require("../middleware/isLoggedIn");
+
+//This will be middleware
+// const fileUploader = require("../config/cloudinary.config");
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -88,62 +92,88 @@ res.redirect("/users/login")
 
 
 
-
-// router.get("/create", isLoggedIn, function (req, res, next) {
-//   res.render("add-new");
+// router.get("/new-post", function (req, res, next) {
+//   res.render("create-user");
 // });
 
-// router.post("/create", isLoggedIn, function (req, res, next) {
-//   if (!req.body.name || !req.body.description) {
-//     res.render("add-new", { message: "please fill out all fields" });
-//   }
+// //This is where we create new posts
+// router.post(
+//   "/new-post",
+//   fileUploader.single("imageUrl"),
+//   function (req, res, next) {
+//     //POST form creates req.body
+//     //Dyamic URL creates req.params
+//     //GET creates req.query
+//     //Sessions create req.session
+//     //fileUploader creates req.file
 
-//   Profile.create({
-//     username: req.body.username,
-//     description: req.body.description,
-//     owner: req.session.user._id,
-//   })
-//     .then(() => {
-//       res.redirect("/");
+//     console.log("This is our file", req.file);
+
+//     Post.create({
+//       title: req.body.title,
+//       content: req.body.content,
+//       creatorId: "625edd8321e64121b31a16f0",
+//       imageUrl: req.file.path,
 //     })
-//     .catch((error) => {
-//       console.log("Failed");
-//       res.render("add-new", {
-//         message: "something went wrong",
-//       });
-//     });
-// });
-
-// router.get("/:id/add-new", isLoggedIn, (req, res) => {
-//   Profile.findById(req.params.id)
-//     .then(() => {
-//       res.render("add-review", { users: users });
-//     })
-//     .catch(() => {
-//       res.redirect("/users/profile");
-//     });
-// });
-
-// router.post("/:id/add-review", isLoggedIn, (req, res) => {
-//   Profile.create({
-//     user: req.session.user._id,
-//     comment: req.body.comment,
-//   })
-//     .then((createdReview) => {
-//       Profile.findByIdAndUpdate(req.params.id, {
-//         $push: { reviews: createdReview._id },
+//       .then((createdPost) => {
+//         console.log("Post created", createdPost);
+//         res.redirect("/");
 //       })
-//         .then((results) => {
-//           res.redirect("/users/profile");
-//         })
-//         .catch((err) => {
-//           res.json(err.message);
-//         });
+//       .catch((error) => {
+//         console.log("Failed to create post", error.message);
+//       });
+//   }
+// );
+
+// router.get("/all-posts", function (req, res, next) {
+//   Post.find()
+//     .populate("creatorId")
+//     .then((allPosts) => {
+//       res.render("all-posts", { allPosts: allPosts });
 //     })
 //     .catch((err) => {
-//       console.log("Failed to create comment", err.message);
-//       res.json(err.message);
+//       console.log("Something went wrong", err.message);
 //     });
+// });
+
+// //Get user and profile, option 1
+// router.get("/profile/:userId", function (req, res, next) {
+//   User.findById(req.params.userId)
+//     .then((foundUser) => {
+//       Post.find({ creatorId: req.params.userId }).then((allPosts) => {
+//         res.render("profile", { user: foundUser, allPosts: allPosts });
+//       });
+//     })
+//     .catch((err) => {
+//       console.log("Something went wrong", err.message);
+//     });
+// });
+
+// //Get user and profile, option 2
+// // router.get("/profile/:userId", function (req, res, next) {
+// //   Post.find({ creatorId: req.params.userId })
+// //     .populate("creatorId")
+// //     .then((allPosts) => {
+// //       res.render("profile", {
+// //         user: allPosts[0].creatorId,
+// //         allPosts: allPosts,
+// //       });
+// //     })
+// //     .catch((err) => {
+// //       console.log("Something went wrong", err.message);
+// //     });
+// // });
+
+// router.get("/secret", (req, res) => {
+//   if (req.session.user) {
+//     res.render("secret");
+//   } else {
+//     res.render("index", {
+//       title: "Express",
+//       message: "You can only see this if you are logged in",
+//     });
+//   }
 // });
 
 module.exports = router;
+

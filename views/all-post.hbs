@@ -1,0 +1,12 @@
+<h3>All Posts</h3>
+
+{{#each allPosts}}
+
+  <h4>{{this.title}}</h4>
+  <p>{{this.content}}</p>
+  <img src="{{this.imageUrl}}" />
+  <p>Created by:
+    <a
+      href="/profile/{{this.creatorId._id}}"
+    >{{this.creatorId.username}}</a></p>
+{{/each}}

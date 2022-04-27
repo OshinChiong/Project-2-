@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
+  
 }
 .home {
   margin-top: 8%;
@@ -35,8 +35,7 @@ a {
 }
  
 
-
-.signup {
+/* .signup {
   background-size:50%;
   background-repeat:no-repeat;
   position: absolute;
@@ -53,7 +52,7 @@ a {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   font-size: large;
-}
+} */
  
  h2{
    text-align: center;
