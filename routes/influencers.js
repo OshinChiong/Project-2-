@@ -9,17 +9,6 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
-// router.get('/influencers', function(req, res, next) {
-//   Influencers.find()
-//   .then(function(influencers){
-//   res.render('all-influencers', {influencers: influencers});
-// })
-// .catch(function (error) {
-//   console.log(error);
-// });
-// });
-
-
 router.get("/influencers", isLoggedIn, (req, res) => {
   Influencers.find()
     .populate({

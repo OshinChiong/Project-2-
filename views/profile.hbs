@@ -1,0 +1,23 @@
+ <h1> InfluRaters</h1>
+ 
+ <a href="/users/profile"> Go back </a> 
+ <a href="/users/profile"> Profile </a> 
+ <a href="/influencers/influencers"> View all influencers</a> 
+ <a href="/users/logout">Log out</a>
+
+    <p> Username: {{this.username._id}} </p>
+    <p> Fullname: {{this.fullname}} </p>
+   <img src={{this.profile_pic_url._id}} /> 
+
+   {{!-- <h2>Influencers Ive been working with </h2>
+
+<form method="post" action="/users/{{foundInfluencers._id}}/add-new">
+
+   <label> Name </label>
+  <input name="name" value="" />
+  <label> Comment </label>
+  <textarea name="comment"> </textarea>
+  <button type="submit"> Add new co-work </button>
+</form>
+
+<p>{{message}}</p> --}}

@@ -7,7 +7,7 @@ router.get("/test-api", (req, res, next) => {
 
   const options = {
     method: "GET",
-    url: "https://instagram29.p.rapidapi.com/user/kingjames",
+    url: "https://instagram29.p.rapidapi.com/user/saschafitness",
     headers: {
       "X-RapidAPI-Host": "instagram29.p.rapidapi.com",
       "X-RapidAPI-Key": "3072f09d45msh854525fc2b692bep13c14ejsn2f8e11f4b962",

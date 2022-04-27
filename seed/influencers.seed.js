@@ -21,6 +21,25 @@ const influencers = [
         "username": "kingjames",
         "igtv_video_count": 48,
         "post_count": 2302,
+    },
+    {
+        "biography": "Fitness-Nutrition Coach\nCEO- Sascha Fitness Corp\nBook author\nMamá\nYoutube: Sascha Fitness\n📧info@saschafitness.com\n@saschafitnessmarket\n🛒⬇️Shop",
+            "website": "https://sascha.fit/Products",
+            "follower_count": 4926975,
+            "following_count": 1433,
+            "full_name": "Sascha Barboza",
+            "highlight_reel_count": 19,
+            "id": "180141576",
+            "is_business_account": false,
+            "business_category_name": null,
+            "overall_category_name": null,
+            "is_private": false,
+            "is_verified": true,
+            "profile_pic_url": "https://instagram.fgyd7-1.fna.fbcdn.net/v/t51.2885-19/278242014_703087544470885_2808752553076621927_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fgyd7-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=QTFZUh7fKXUAX8qbOBO&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8sOs-WvyI_fChP-YAeRqPwjb08VrDzCxvKx9NK2flPcQ&oe=6270FA0E&_nc_sid=7bff83",
+            "profile_pic_url_hd": "https://instagram.fgyd7-1.fna.fbcdn.net/v/t51.2885-19/278242014_703087544470885_2808752553076621927_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fgyd7-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=QTFZUh7fKXUAX8qbOBO&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-FQiSC-JNAOPpaqTLd3-Sxj5bqi8SYdrkW5tlOXpFkNA&oe=6270FA0E&_nc_sid=7bff83",
+            "username": "saschafitness",
+            "igtv_video_count": 37,
+            "post_count": 7311,
     }
 
 ];

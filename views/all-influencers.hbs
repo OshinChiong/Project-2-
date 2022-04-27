@@ -1,20 +1,20 @@
-
-<div class="segundo"> 
- </div>
-
+<h1> Influencers </h1>
 {{message}}
-<li> <a href="/influencers/influencers"> View all influencers</a> </li>
+ 
 {{#each allInfluencers}}
-<div class="texto"> 
-
-    <img src="https://instagram.fvno3-1.fna.fbcdn.net/v/t51.2885-19/263570976_273354718170504_5597971410410838789_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fvno3-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=Kjqkwe8ifK4AX8sTL46&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT9cPQpIcOUhptaxpj7IOqWbK2RwyoRyWIQ0PhVp9ttdTA&oe=626CE978&_nc_sid=7bff83" alt="image" />
+<div class="influencers"> 
+    <img src="https://www.google.com/search?q=kingjames&hl=es-419&sxsrf=APq-WBv6kkrX7xHfNMPIDHa2c75aUZ_6xg:1651076951508&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjBwcP51LT3AhWtRDABHbosD48Q_AUoAXoECAIQAw&biw=1440&bih=703&dpr=2#imgrc=zPxacuvwp0zbMM"/>
+    {{!-- <img src="https://instagram.fvno3-1.fna.fbcdn.net/v/t51.2885-19/263570976_273354718170504_5597971410410838789_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fvno3-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=Kjqkwe8ifK4AX8sTL46&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT9cPQpIcOUhptaxpj7IOqWbK2RwyoRyWIQ0PhVp9ttdTA&oe=626CE978&_nc_sid=7bff83" alt="image" /> --}}
+   <p>  <img src={{this.profile_pic_url}} /> </p> 
     <p> Username: {{this.username}} </p>
-    <p> Fullname: {{this.fullname}} </p>
+    <p> Biography: {{this.biography}} </p>
     <p> Followers: {{this.follower_count}} </p>
     <p> Following: {{this.following_count}} </p>
+    <p> Verified: {{this.is_verified}} </p>
+    <p> highlight_reel_count: {{this.highlight_reel_count}} </p>
 
    <a href="/influencers/{{this._id}}"> See reviews </a>
-
+   <a href="/users/profile"> Go back </a> 
   <ul> 
  <li> <a href="/influencers/{{this._id}}/add-review"> add a Review </a> </li>
 
