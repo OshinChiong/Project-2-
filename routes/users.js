@@ -4,7 +4,7 @@ const User = require("../models/User.model");
 const bcrypt = require("bcryptjs");
 const bcryptjs = require("bcryptjs");
 const res = require('express/lib/response');
-const Profile = require('../models/Profile.model');
+
 const saltRounds = 10;
 const isLoggedIn = require("../middleware/isLoggedIn");
 const fileUploader = require("../config/cloudinary.config");
