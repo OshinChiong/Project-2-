@@ -85,9 +85,7 @@ router.post("/login", (req, res) => {
         } else {
             res.render('login', {message: "Incorrect Password"})
         }
-      //   .then((logged) => {
-      //   res.render('login', {message: "Welcome to InfluRaters"})
-      // })
+    
     }
 })
 })
@@ -115,7 +113,7 @@ router.post(
     })
       .then((createdPost) => {
         console.log("Post created", createdPost);
-        res.redirect("/");
+        res.redirect("/users/profile");
       })
       .catch((error) => {
         console.log("Failed to create post", error.message);
