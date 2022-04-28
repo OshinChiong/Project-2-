@@ -1,10 +1,10 @@
- <h1> InfluRaters</h1>
+ <h1> Welcome to InfluRaters</h1>
 <html>
 <head>
 <style>
 
 .profile{
-  
+  width: 20%;
  list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,6 +14,7 @@
   color: rgb(21, 234, 191);
   padding: 8px 16px;
   text-decoration: none;
+  align-items: flex-end;
 }
 
 
@@ -30,18 +31,6 @@ li a:hover:not(.active) {
 </head>
 <body>
 
-<div class="profile"> 
-<ul>
-  <li><a href="/users/profile/"> Profile </a></li>
-  <li><a href="/influencers/influencers"> See all influencers</a></li>
-  {{!-- <li><a class="active" href="/users/profile"> Go Back</a></li> --}}
-  <li><a href="/users/logout"> Log out </a></li>
-</ul>
-</div>
-</body>
-</html>
- 
- 
 
 <form method="post" action="/users/new-post" enctype="multipart/form-data">
   <label>Title of Post</label>
@@ -55,15 +44,29 @@ li a:hover:not(.active) {
 
 
 
-  <h3>This is {{This.user.username}}'s profile</h3>
+<h3>This is {{foundUser.username}}'s profile</h3>
 
-<p>{{user.username}}'s posts </p>
+<p>{{foundUser.username}}'s posts </p>
 
 {{#each allPosts}}
   <h5>{{this.title}}</h5>
   <p>{{this.content}}</p>
 
 {{/each}}
+
+
+<div class="profile"> 
+<ul>
+  {{!-- <li><a href="/users/profile/"> Profile </a></li> --}}
+  <li><a href="/influencers/influencers"> See all influencers</a></li>
+  <li><a href="/users/logout"> Log out </a></li>
+</ul>
+</div>
+</body>
+</html>
+ 
+ 
+
 
 
 
@@ -81,15 +84,3 @@ li a:hover:not(.active) {
      --}}
 
 
-
-   {{!-- <h2>Influencers Ive been working with </h2>
-<form method="post" action="/users/{{foundInfluencers._id}}/add-new">
-
-   <label> Name </label>
-  <input name="name" value="" />
-  <label> Comment </label>
-  <textarea name="comment"> </textarea>
-  <button type="submit"> Add new co-work </button>
-</form>
-
- --}}

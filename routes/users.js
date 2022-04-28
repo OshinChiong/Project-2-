@@ -8,16 +8,21 @@ const res = require('express/lib/response');
 const saltRounds = 10;
 const isLoggedIn = require("../middleware/isLoggedIn");
 const fileUploader = require("../config/cloudinary.config");
+const session = require('express-session');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get("/profile", function (re, res, next) {
-  res.render("profile");
+router.get("/profile", function (req, res, next) {
+  User.findById({_id: req.session.user._id})
+  .then((foundUser) => {
+    console.log(foundUser)
+    res.render("profile", {foundUser: foundUser});
+  })
 });
-
+  
 router.get("/home", function (re, res, next) {
   res.render("home");
 });
@@ -58,7 +63,6 @@ User.findOne({email: req.body.email})
 })
 })
 
-
 router.get("/login", (req, res) => {
   res.render("login");
 });
@@ -79,6 +83,9 @@ router.post("/login", (req, res) => {
         } else {
             res.render('login', {message: "Incorrect Password"})
         }
+      //   .then((logged) => {
+      //   res.render('login', {message: "Welcome to InfluRaters"})
+      // })
     }
 })
 })
@@ -87,10 +94,6 @@ router.get("/logout", function (req, res, next) {
 req.session.destroy();
 res.redirect("/users/login")
 });
-
-
-
-
 
 router.get("/new-post",isLoggedIn, function (req, res, next) {
   res.render("create-post");
