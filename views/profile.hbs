@@ -14,7 +14,7 @@
   color: rgb(21, 234, 191);
   padding: 8px 16px;
   text-decoration: none;
-  align-items: flex-end;
+  float: right;
 }
 
 
@@ -27,22 +27,22 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+.btn{
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+
+h1{
+  text-align: center;
+}
 </style>
 </head>
 <body>
-
-
-<form method="post" action="/users/new-post" enctype="multipart/form-data">
-  <label>Title of Post</label>
-  <input name="title" />
-  <label>Content</label>
-  <input name="content" />
-  <label>Picture</label>
-  <input type="file" name="imageUrl" />
-  <button type="submit"> Create Post </button>
-</form>
-
-
 
 <h3>This is {{foundUser.username}}'s profile</h3>
 
@@ -51,36 +51,27 @@ li a:hover:not(.active) {
 {{#each allPosts}}
   <h5>{{this.title}}</h5>
   <p>{{this.content}}</p>
-
 {{/each}}
 
 
 <div class="profile"> 
 <ul>
-  {{!-- <li><a href="/users/profile/"> Profile </a></li> --}}
   <li><a href="/influencers/influencers"> See all influencers</a></li>
   <li><a href="/users/logout"> Log out </a></li>
 </ul>
 </div>
+
+<form method="post" action="/users/new-post" enctype="multipart/form-data">
+  <div class="profile2"> 
+  <input class="field" type="text"  placeholder="Title of Post" name="title" />
+  <input class="field" type="text"  placeholder="Content" name="content" />
+  <input type="file" name="imageUrl" />
+  <button type="submit"  class="btn"> Create Post </button>
+  </div>
+ 
+</form>
 </body>
 </html>
  
- 
-
-
-
-
-
-     {{!-- <a href="/users/profile"> Go back </a> 
- <a href="/users/profile"> Profile </a> 
- <a href="/influencers/influencers"> View all influencers</a> 
- <a href="/users/logout">Log out</a> --}}
-
-
-
-    {{!-- <p> Username: {{this.username._id}} </p>
-    <p> Fullname: {{this.fullname}} </p>
-    <img src={{this.profile_pic_url._id}} /> 
-     --}}
 
 

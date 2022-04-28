@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/profile", function (req, res, next) {
-  User.findById({_id: req.session.user._id})
+  User.findById(req.session.user._id)
   .then((foundUser) => {
     console.log(foundUser)
     res.render("profile", {foundUser: foundUser});
@@ -57,6 +57,8 @@ User.findOne({email: req.body.email})
             password: hashedPass
         })
         .then((createdUser) => {
+          //crete a session here
+          req.session.user = createdUser;
             res.render('all-influencers', {message: "You have created a new account"})
         })
     }

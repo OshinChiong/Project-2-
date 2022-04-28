@@ -6,11 +6,12 @@ body {
 .home {
   margin-top: 8%;
   background-image: url("/images/General@2x.png" );
+  /* background-image: url("/images/Influraters.png" ); */
   background-size:50%;
   background-repeat: repeat-x;
   height: 80vh; 
  text-align: left;
- 
+ opacity: 1;
 }
 
 a {
