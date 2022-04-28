@@ -10,6 +10,15 @@ const userSchema = new Schema(
     username: {
         type: String,
         unique: true
+    },
+    title: {
+      type: String,
+    },
+    content: {
+      type: String,
+    },
+    imageUrl: {
+      type: String,
     }
   },
   {

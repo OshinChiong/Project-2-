@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv/config');
 
 const Influencers = require('../models/Influencers.model')
 
@@ -55,6 +56,6 @@ Influencers.create(influencers)
 })
 
   mongoose
-  .connect('mongodb://localhost/project-2') 
+  .connect( process.env.MONGODB_URI) 
   .then(x => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
   .catch(err => console.error('Error connecting to mongo', err));

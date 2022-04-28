@@ -32,7 +32,7 @@ li a:hover:not(.active) {
 
 <div class="profile"> 
 <ul>
-  <li><a href="/users/profile"> Profile </a></li>
+  <li><a href="/users/profile/"> Profile </a></li>
   <li><a href="/influencers/influencers"> See all influencers</a></li>
   {{!-- <li><a class="active" href="/users/profile"> Go Back</a></li> --}}
   <li><a href="/users/logout"> Log out </a></li>
@@ -43,18 +43,46 @@ li a:hover:not(.active) {
  
  
 
- 
- {{!-- <a href="/users/profile"> Go back </a> 
+<form method="post" action="/users/new-post" enctype="multipart/form-data">
+  <label>Title of Post</label>
+  <input name="title" />
+  <label>Content</label>
+  <input name="content" />
+  <label>Picture</label>
+  <input type="file" name="imageUrl" />
+  <button type="submit"> Create Post </button>
+</form>
+
+
+
+  <h3>This is {{thi.user.username}}'s profile</h3>
+
+<p>{{user.username}}'s posts </p>
+
+{{#each allPosts}}
+  <h5>{{this.title}}</h5>
+  <p>{{this.content}}</p>
+
+{{/each}}
+
+
+
+
+     {{!-- <a href="/users/profile"> Go back </a> 
  <a href="/users/profile"> Profile </a> 
  <a href="/influencers/influencers"> View all influencers</a> 
  <a href="/users/logout">Log out</a> --}}
 
-    <p> Username: {{this.username._id}} </p>
+
+
+    {{!-- <p> Username: {{this.username._id}} </p>
     <p> Fullname: {{this.fullname}} </p>
-   <img src={{this.profile_pic_url._id}} /> 
+    <img src={{this.profile_pic_url._id}} /> 
+     --}}
+
+
 
    {{!-- <h2>Influencers Ive been working with </h2>
-
 <form method="post" action="/users/{{foundInfluencers._id}}/add-new">
 
    <label> Name </label>
