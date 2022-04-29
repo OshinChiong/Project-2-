@@ -1,17 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+  /* background-image: url(/images/fondo.jpg); */
+ 
 }
-.home {
-  margin-top: 8%;
-  background-image: url("/images/General@2x.png" );
-  /* background-image: url("/images/Influraters.png" ); */
-  background-size:50%;
-  background-repeat: repeat-x;
-  height: 80vh; 
- text-align: left;
- opacity: 1;
+
+.img{
+  background-image: url("images/fondo.jpg");
 }
 
 a {
@@ -35,8 +30,6 @@ a {
   -webkit-box-align: center;
 }
  
-
-
  h2{
    text-align: center;
  }
@@ -47,14 +40,6 @@ button{
   background-color: #00B7FF;
 }
 
-.segundo{
-background-image: url("/images/download.png"); 
-height: 20vh;
-background-repeat:repeat-x;
-background-position:right;
-font-size: medium;
-
-}
 
 .footer {
   position: fixed;
@@ -64,6 +49,8 @@ font-size: medium;
   text-align: center;
   align-items: center;
   background-repeat: no-repeat;
-  /* background-image: url("/images/depositphotos_405550866-stock-illustration-google-play-store-apple-app.jpg");   */
 }
 
+.login{
+  background-image: url("images/otrofondo.jpg");
+}

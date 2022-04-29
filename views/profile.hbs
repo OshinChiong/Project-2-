@@ -1,7 +1,19 @@
  <h1> Welcome to InfluRaters</h1>
+
+ <img src="/images/Influraters2.jpg"/> 
+
 <html>
 <head>
 <style>
+
+  body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  {{!-- background-image: url(/images/perfil2.jpg); --}}
+ background-size: cover;
+ background-position: right;
+ 
+}
 
 .profile{
   width: 20%;
@@ -15,8 +27,8 @@
   padding: 8px 16px;
   text-decoration: none;
   float: right;
+  background-image:url(images/otrofondo.jpg);
 }
-
 
 li a.active {
   background-color: #04AA6D;
@@ -36,17 +48,21 @@ li a:hover:not(.active) {
   width: 10%;
   opacity: 0.9;
 }
+img{
+  height: 10vh;
+}
 
 h1{
   text-align: center;
 }
+
 </style>
 </head>
 <body>
+<p>{{foundUser.username}}'s posts </p>
 
 <h3>This is {{foundUser.username}}'s profile</h3>
 
-<p>{{foundUser.username}}'s posts </p>
 
 {{#each allPosts}}
   <h5>{{this.title}}</h5>
